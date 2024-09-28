@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Page() {
-  return <h1>Hello Sadan from Next</h1>;
+  return <h1>The Wild Oasis. Welcome to paradise.</h1>;
 }
