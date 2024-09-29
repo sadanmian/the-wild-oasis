@@ -1,10 +1,16 @@
-import Navigation from "../components/Navigation";
+export default async function Page() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/users");
+  const data = await res.json();
 
-export default function Page() {
+  console.log(data);
   return (
     <div>
-      {/* <Navigation /> */}
-      <h1>Cabins Page</h1>
+      <h1>Cabins Pageeee</h1>
+      <ul>
+        {data.map((e) => (
+          <li key={e?.id}>{e?.name}</li>
+        ))}
+      </ul>
     </div>
   );
 }
